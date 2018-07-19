@@ -47,6 +47,28 @@ class Body extends Component {
 }
 
 class RandomNumbers extends Component {
+  componentWillMount() {
+    console.log("Component is about to be mounted...");
+  }
+
+  componentWillUnmount() {
+    console.log("Component is about to be un mounted...");
+  }
+
+  componentDidMount() {
+    console.log("Component did mount...");
+  }
+
+
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    return true;
+    // return super.shouldComponentUpdate(nextProps, nextState, nextContext);
+  }
+
+  componentWillReceiveProps(newProps) {
+    console.log("Componnet receive prop called");
+  }
+
   render() {
     return (
       <div>
